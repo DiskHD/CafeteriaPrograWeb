@@ -3,29 +3,285 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Landing - [EN DESARROLLO]</title>
+    <title>Coffee Landing</title>
     <link rel="stylesheet" href="estilo.css">
   </head>
   <body>
     <div class="contenedor contenedor1"> 
       <div class="logo">
-        logo
+        LOGO
+      </div>
+      <div class="nav-menu">
+        <button class="nav-btn active">Home</button>
+        <button class="nav-btn">Menu</button>
+        <button class="nav-btn">Deals</button>
+        <button class="nav-btn">Favourite</button>
+        <div class="cart-icon">
+          <span>🛒</span>
+          <span class="cart-badge">2</span>
+        </div>
       </div>
       <div class="coffee">
         <pre><h1>IT'A BREAK
-WITH <b>COFFEE 
-     COFFEE
-     COFFEE</b>
-     COFFEE
-     COFFEE
-     COFFEE
+  WITH <b>COFFEE 
+       COFFEE
+       COFFEE</b>
+       COFFEE
+       COFFEE
+       COFFEE
         </h1></pre>
       </div>
+      <div class="hero-images">
+        <div class="coffee-beans-scatter"></div>
+      </div>
+      <div class="pagination-dots">
+        <span class="dot"></span>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
     </div>
+    
     <div class="contenedor contenedor2">
-
+      <div class="category-nav">
+        <div class="category active">
+          <span class="bean-icon">☕</span>
+          <span>COFFEE</span>
+        </div>
+        <div class="category">
+          <span class="bean-icon">🧊</span>
+          <span>ICE TEA</span>
+        </div>
+        <div class="category">
+          <span class="bean-icon">🥤</span>
+          <span>BEVERAGE</span>
+        </div>
+        <div class="category">
+          <span class="bean-icon">🧃</span>
+          <span>JUICES</span>
+        </div>
+      </div>
     </div>
 
+    <div class="contenedor product-showcase">
+      <div class="product-options">
+        <div class="option-circle active">
+          <div class="option-img white-coffee"></div>
+          <span>White</span>
+        </div>
+        <div class="option-circle">
+          <div class="option-img milk-coffee"></div>
+          <span>Milk</span>
+        </div>
+        <div class="option-circle">
+          <div class="option-img dark-coffee"></div>
+          <span>Dark</span>
+        </div>
+      </div>
+      
+      <div class="product-main-image">
+        <div class="main-product-img"></div>
+      </div>
+      
+      <div class="product-details">
+        <h2>MILTON'S CHOCO COFFEE</h2>
+        <div class="rating-price">
+          <div class="rating">
+            <span class="star filled">⭐</span>
+            <span class="star filled">⭐</span>
+            <span class="star filled">⭐</span>
+            <span class="star filled">⭐</span>
+            <span class="star">⭐</span>
+          </div>
+          <span class="price">$12</span>
+        </div>
+        <p class="product-description">
+          Chocolate coffee, also known as a mocha, is a delightful drink that combines the rich taste of chocolate with the robust flavor. This classic combination can be enjoyed hot or cold, and is customizable to your preference.
+        </p>
+        <div class="quantity-selector">
+          <button class="qty-btn" onclick="decreaseQty()">-</button>
+          <span class="qty-value" id="qtyValue">2</span>
+          <button class="qty-btn" onclick="increaseQty()">+</button>
+        </div>
+        <button class="add-to-cart-btn" onclick="addToCart()">ADD TO CART</button>
+      </div>
+    </div>
 
+    <div class="contenedor process-section">
+      <div class="process-header">
+        <h2 class="process-title">The Best Taste<br>From The Process</h2>
+        <p class="process-description">
+          We carefully select the finest coffee beans and roast them to perfection. Our artisanal process ensures every cup delivers exceptional flavor and aroma that coffee lovers crave.
+        </p>
+      </div>
+      
+      <div class="process-cards">
+        <div class="process-card dark">
+          <div class="process-icon">✋</div>
+          <h3>Hand Roasted</h3>
+          <p>Expertly roasted by hand for perfect flavor</p>
+        </div>
+        <div class="process-card light">
+          <div class="process-icon">☕</div>
+          <h3>Direct Trade</h3>
+          <p>Sourced directly from coffee farmers</p>
+        </div>
+        <div class="process-card dark">
+          <div class="process-icon">🌿</div>
+          <h3>Organic Taste</h3>
+          <p>100% organic and naturally grown</p>
+        </div>
+      </div>
+      
+      <div class="scroll-badge">
+        <svg viewBox="0 0 100 100" class="circle-text">
+          <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+          <text>
+            <textPath href="#circlePath">SCROLL DOWN • EXPLORE • SCROLL DOWN • </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="contenedor popular-section">
+      <h2 class="section-title">OUR POPULAR FLAVOUR</h2>
+      
+      <div class="products-grid">
+        <div class="product-card">
+          <span class="product-tag">Chocolate</span>
+          <div class="product-card-img"></div>
+          <h3>Milton's Choco Coffee</h3>
+          <div class="card-rating-price">
+            <div class="rating">
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star">⭐</span>
+            </div>
+            <span class="price">$12</span>
+          </div>
+          <button class="card-add-btn" onclick="addToCart()">ADD TO CART</button>
+        </div>
+        
+        <div class="product-card">
+          <span class="product-tag">Chocolate</span>
+          <div class="product-card-img"></div>
+          <h3>Milton's Choco Coffee</h3>
+          <div class="card-rating-price">
+            <div class="rating">
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star">⭐</span>
+            </div>
+            <span class="price">$12</span>
+          </div>
+          <button class="card-add-btn" onclick="addToCart()">ADD TO CART</button>
+        </div>
+        
+        <div class="product-card">
+          <span class="product-tag">Chocolate</span>
+          <div class="product-card-img"></div>
+          <h3>Milton's Choco Coffee</h3>
+          <div class="card-rating-price">
+            <div class="rating">
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star">⭐</span>
+            </div>
+            <span class="price">$12</span>
+          </div>
+          <button class="card-add-btn" onclick="addToCart()">ADD TO CART</button>
+        </div>
+        
+        <div class="product-card">
+          <span class="product-tag">Chocolate</span>
+          <div class="product-card-img"></div>
+          <h3>Milton's Choco Coffee</h3>
+          <div class="card-rating-price">
+            <div class="rating">
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star filled">⭐</span>
+              <span class="star">⭐</span>
+            </div>
+            <span class="price">$12</span>
+          </div>
+          <button class="card-add-btn" onclick="addToCart()">ADD TO CART</button>
+        </div>
+      </div>
+      
+      <div class="pagination-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="contenedor newsletter-section">
+      <div class="newsletter-content">
+        <h2>Get New Updates<br>And Discount Offers.</h2>
+        <p>Subscribe to our newsletter and get exclusive deals and offers delivered to your inbox.</p>
+        <div class="subscribe-form">
+          <input type="email" placeholder="Enter your email" class="email-input">
+          <button class="subscribe-btn" onclick="subscribe()">SUBSCRIBE</button>
+        </div>
+      </div>
+      
+      <div class="newsletter-image">
+        <div class="coffee-bag-mockup"></div>
+        <div class="coffee-cup-mockup"></div>
+        <div class="beans-decoration"></div>
+      </div>
+    </div>
+
+    <div class="contenedor footer-section">
+      <div class="footer-content">
+        <div class="footer-col brand-col">
+          <h3>MILTON'S</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Page</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Favourite</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Linkedin</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contacts</h4>
+          <ul>
+            <li>📍 House Nr 123, Street, City</li>
+            <li>📞 +123 4567 8910</li>
+            <li>✉️ youremail@email.com</li>
+            <li>🌐 www.yourmobilename.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>All copyrights are reserved by YourCompanyName</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
   </body>
-</html>  
+</html>
